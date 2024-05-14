@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="additional_suppliers.list">
+      <field name="name">additional_suppliers list</field>
+      <field name="model">additional_suppliers.additional_suppliers</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="additional_suppliers.action_window">
+      <field name="name">additional_suppliers window</field>
+      <field name="res_model">additional_suppliers.additional_suppliers</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="additional_suppliers.action_server">
+      <field name="name">additional_suppliers server</field>
+      <field name="model_id" ref="model_additional_suppliers_additional_suppliers"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="additional_suppliers" id="additional_suppliers.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="additional_suppliers.menu_1" parent="additional_suppliers.menu_root"/>
+    <menuitem name="Menu 2" id="additional_suppliers.menu_2" parent="additional_suppliers.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="additional_suppliers.menu_1_list" parent="additional_suppliers.menu_1"
+              action="additional_suppliers.action_window"/>
+    <menuitem name="Server to list" id="additional_suppliers" parent="additional_suppliers.menu_2"
+              action="additional_suppliers.action_server"/>
+-->
+  </data>
+</odoo>

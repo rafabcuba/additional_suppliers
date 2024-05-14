@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Define the menu item -->
-        <record id="menu_additional_vendors" model="ir.ui.menu">
-            <field name="name">Additional Vendors</field>
-            <field name="action" ref="account.res_partner_action_supplier"/>
-            <field name="parent_id" ref="purchase.menu_procurement_management"/>
-            <field name="sequence" eval="16"/>
+        <!-- session tree/list view -->
+        <record model="ir.ui.view" id="additional_vendors_tree_view">
+            <field name="name">additional_vendors.tree</field>
+            <field name="model">additional_vendors.vendor</field>
+            <field name="arch" type="xml">
+                <tree string="Session Tree">
+                    <field name="partner_id"/>
+                    <field name="admission_date"/>
+                    <field name="purchase_amount"/>
+                    <field name="state" optional="show" widget="badge" decoration-success="state == 'confirmed'"
+                           decoration-danger="state == 'cancelled'" decoration-info="state == 'in progress'"/>
+                </tree>
+            </field>
         </record>
 
-        <!-- Define the action associated with the menu item -->
-        <record id="additional_vendors.action_additional_vendor" model="ir.actions.act_window">
+        <!-- Form view-->
+        <record id="vista_mi_modelo_formulario" model="ir.ui.view">
+            <field name="name">additional_vendors.form</field>
+            <field name="model">additional_vendors.vendor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary"
+                                type="object" states="in progress"/>
+                        <button id="button_cancel" name="action_cancel" string="Cancel" class="btn-danger"
+                                type="object" states="confirmed"/>
+                        <field name="state" widget="statusbar" readonly="1" statusbar_visible="in progress,confirmed"/>
+                    </header>
+                    <!-- form fields -->
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="partner_id" can_create="true" can_write="true"
+                                       modifiers="{'required':true}" id="partner_id"/>
+                                <field name="admission_date" modifiers="{'required':true}" id="admission_date"/>
+                            </group>
+                            <group>
+                                <field name="currency_id" can_create="true" can_write="true"
+                                       modifiers="{'required':true}" id="currency_id"/>
+                                <field name="purchase_amount" modifiers="{'required':true}" id="purchase_amount"/>
+                            </group>
+                            <group>
+                                <field name="expense_account_id" can_create="true" can_write="true"
+                                       modifiers="{}" id="expense_account_id"/>
+                            </group>
+                        </group>
+                        <separator modifiers="{}"/>
+                    </sheet>
+                    <!-- chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- filter & search -->
+        <record model="ir.ui.view" id="session_search_view">
+            <field name="name">additional_vendors.search</field>
+            <field name="model">additional_vendors.vendor</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="partner_id"/>
+                    <filter name="best_vendors" string="Best vendors" domain="[('purchase_amount', '>' , 2000)]"/>
+                    <filter name="additional_vendors_group_state" string="State" context="{'group_by':'state'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action associated with the menu item -->
+        <record id="action_additional_vendor" model="ir.actions.act_window">
             <field name="name">Additional Vendors</field>
             <field name="res_model">additional_vendors.vendor</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
         </record>
+
+        <!-- Menu item -->
+        <menuitem id="menu_procurement_management_additional_vendor" name="Additional Vendors"
+            parent="purchase.menu_procurement_management"
+            action="action_additional_vendor" sequence="16"/>
+
     </data>
 </odoo>

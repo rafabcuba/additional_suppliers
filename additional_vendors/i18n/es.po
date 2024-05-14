@@ -1,21 +1,107 @@
-# Translation of Additional suppliers Module.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	additional_vendors
-# 
-# Translators:
-# Rafael Enrique Báez Guevara <rafabcuba@odoo.com>, 2024
+# 	* additional_vendors
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 14.0-20231114\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-25 10:15+0000\n"
-"PO-Revision-Date: 2020-09-07 08:09+0000\n"
-"Last-Translator: Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2023\n"
-"Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
+"POT-Creation-Date: 2024-05-14 15:23+0000\n"
+"PO-Revision-Date: 2024-05-14 15:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: \n"
 
+#. module: additional_vendors
+#: model:ir.actions.act_window,name:additional_vendors.action_additional_vendor
+#: model:ir.ui.menu,name:additional_vendors.menu_procurement_management_additional_vendor
+msgid "Additional Vendors"
+msgstr ""
 
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__admission_date
+msgid "Admission Date"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__confirmed
+msgid "Confirmed"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__expense_account_id
+msgid "Expense Account"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__id
+msgid "ID"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__in_progress
+msgid "In Progress"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__partner_id
+msgid "Partner"
+msgstr "Proveedor"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__purchase_amount
+msgid "Purchase Amount"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__state
+msgid "Status"
+msgstr ""
+
+#. module: additional_vendors
+#: model:ir.model,name:additional_vendors.model_additional_vendors_vendor
+msgid "additional vendor"
+msgstr ""

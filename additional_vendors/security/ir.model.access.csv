@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_additional_vendors_additional_vendors,additional_vendors.additional_vendors,model_additional_vendors_additional_vendors,base.group_user,1,1,1,1
+access_additional_vendors_vendor,access_additional_vendors_vendor,model_additional_vendors_vendor,base.group_user,1,1,1,1

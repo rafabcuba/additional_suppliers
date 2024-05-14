@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Additional suppliers",
+    'name': "Additional vendors",
 
     'summary': """
-        Adds a new concept called “Additional Suppliers”
+        Adds a new concept called “Additional Vendors”
         """,
 
     'description': """
         Odoo technical task:
-        Adds a new concept called “Additional Suppliers” with fields:
+        Adds a new concept called “Additional Vendors” with fields:
         Partner,
         Date,
         Purchase amount,
@@ -27,14 +27,14 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base',
-                'purchase'
-                ],
+                'purchase'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        # 'views/views.xml',
+        # 'views/templates.xml',
+        'views/additional_vendors_menu.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

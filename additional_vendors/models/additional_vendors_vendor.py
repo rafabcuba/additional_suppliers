@@ -3,9 +3,9 @@
 from odoo import models, fields
 
 
-class AdditionalSupplier(models.Model):
-    _name = 'additional_suppliers.supplier'
-    _description = 'additional supplier'
+class AdditionalVendor(models.Model):
+    _name = 'additional_vendors.vendor'
+    _description = 'additional vendor'
 
     partner_id = fields.Many2one('res.partner', string='Partner', required=True)
     admission_date = fields.Datetime('Admission Date', required=True)

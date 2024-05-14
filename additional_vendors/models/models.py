@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class additional_suppliers(models.Model):
-#     _name = 'additional_suppliers.additional_suppliers'
-#     _description = 'additional_suppliers.additional_suppliers'
+# class additional_vendors(models.Model):
+#     _name = 'additional_vendors.additional_vendors'
+#     _description = 'additional_vendors.additional_vendors'
 
 #     name = fields.Char()
 #     value = fields.Integer()

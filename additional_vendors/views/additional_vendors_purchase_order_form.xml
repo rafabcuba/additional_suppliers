@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="additional_vendors_purchase_order_form">
+        <field name="name">additional_vendors.purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='purchase_delivery_invoice']" position="after">
+                <page string="Additional vendors" name="additional_vendors">
+                    <field name="additional_vendors_ids" options="{'no_create_edit': True}"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

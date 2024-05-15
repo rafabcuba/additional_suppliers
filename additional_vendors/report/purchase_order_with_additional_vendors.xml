@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_purchaseorder_with_additional_vendors_document"
+              inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <br/>
+            <strong>Additional vendors:</strong>
+            <table class="table table-sm o_main_table">
+                <thead>
+                    <tr>
+                        <th name="thv_vendor"><strong>Vendor</strong></th>
+                        <th name="thv_admission_date"><strong>Admission date</strong></th>
+                        <th name="thv_state" class="text-center"><strong>State</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="o.additional_vendors_ids" t-as="vendor">
+                        <tr>
+                            <td id="vendor">
+                                <span t-field="vendor.partner_id"/>
+                            </td>
+                            <td id="admission_date">
+                                <span t-field="vendor.admission_date"/>
+                            </td>
+                            <td id="state">
+                                <span t-field="vendor.state"/>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            <br/>
+        </xpath>
+    </template>
+</odoo>

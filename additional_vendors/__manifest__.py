@@ -34,7 +34,9 @@
         'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
-        'views/additional_vendors_menu.xml'
+        'views/additional_vendors_menu.xml',
+        'views/additional_vendors_purchase_order_form.xml',
+        'report/purchase_order_with_additional_vendors.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -6,102 +6,300 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0-20231114\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-14 15:23+0000\n"
-"PO-Revision-Date: 2024-05-14 15:23+0000\n"
+"POT-Creation-Date: 2024-05-15 23:37+0000\n"
+"PO-Revision-Date: 2024-05-15 20:38-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.report_purchaseorder_with_additional_vendors_document
+msgid ""
+"<br/>\n"
+"            <strong>Additional vendors:</strong>"
+msgstr ""
+"<br/>\n"
+"            <strong>Proveedores adicionales:</strong>"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.report_purchaseorder_with_additional_vendors_document
+msgid "<strong>Admission date</strong>"
+msgstr "<strong>Fecha de ingreso</strong>"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.report_purchaseorder_with_additional_vendors_document
+msgid "<strong>State</strong>"
+msgstr "<strong>Estado</strong>"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.report_purchaseorder_with_additional_vendors_document
+msgid "<strong>Vendor</strong>"
+msgstr "<strong>Proveedor</strong>"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_needaction
+msgid "Action Needed"
+msgstr "Se necesita una acción"
 
 #. module: additional_vendors
 #: model:ir.actions.act_window,name:additional_vendors.action_additional_vendor
+#: model:ir.module.category,name:additional_vendors.module_category_additional_vendors
 #: model:ir.ui.menu,name:additional_vendors.menu_procurement_management_additional_vendor
 msgid "Additional Vendors"
-msgstr ""
+msgstr "Proveedores Adicionales"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_purchase_order__additional_vendors_ids
+#: model_terms:ir.ui.view,arch_db:additional_vendors.additional_vendors_purchase_order_form
+msgid "Additional vendors"
+msgstr "Proveedores adicionales"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__admission_date
 msgid "Admission Date"
-msgstr ""
+msgstr "Fecha de ingreso"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de  adjuntos"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.session_search_view
+msgid "Best vendors"
+msgstr "Mejores proveedores"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.vista_mi_modelo_formulario
+msgid "Cancel"
+msgstr "Cancelar"
 
 #. module: additional_vendors
 #: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__cancelled
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancelado"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.vista_mi_modelo_formulario
+msgid "Confirm"
+msgstr "Confirmar"
 
 #. module: additional_vendors
 #: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__confirmed
 msgid "Confirmed"
-msgstr ""
+msgstr "Confirmado"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creado en"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "Divisa"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__display_name
+#: model:ir.model.fields,field_description:additional_vendors.field_purchase_order__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre a mostrar"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__expense_account_id
 msgid "Expense Account"
-msgstr ""
+msgstr "Cuenta de Gasto"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: additional_vendors
+#: model:ir.module.category,description:additional_vendors.module_category_additional_vendors
+msgid "Helps you handle your Additional vendors process"
+msgstr "Le ayuda a manejar su proceso de proveedores adicionales"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__id
+#: model:ir.model.fields,field_description:additional_vendors.field_purchase_order__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_needaction
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención."
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_has_error
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
 
 #. module: additional_vendors
 #: model:ir.model.fields.selection,name:additional_vendors.selection__additional_vendors_vendor__state__in_progress
 msgid "In Progress"
-msgstr ""
+msgstr "En curso"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor____last_update
+#: model:ir.model.fields,field_description:additional_vendors.field_purchase_order____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Actualizado por última vez por"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultima actualización en"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__partner_id
 msgid "Partner"
-msgstr "Proveedor"
+msgstr "Socio"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__purchase_amount
 msgid "Purchase Amount"
-msgstr ""
+msgstr "Monto de la compra"
+
+#. module: additional_vendors
+#: model:ir.model,name:additional_vendors.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de compra"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.additional_vendors_purchase_order_form
+msgid "Record"
+msgstr "Contabilizar"
+
+#. module: additional_vendors
+#: model:res.groups,name:additional_vendors.group_additional_vendors_admin_gen
+msgid "Record additional vendor"
+msgstr "Contabilizar proveedor adicional"
+
+#. module: additional_vendors
+#: model:res.groups,comment:additional_vendors.group_additional_vendors_admin_gen
+msgid "Record additional vendor."
+msgstr "Contabilizar un proveedor adicional."
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_purchase_order__additional_vendors_recorded
+msgid "Recorded"
+msgstr "Contabilizado"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.additional_vendors_tree_view
+msgid "Session Tree"
+msgstr "Árbol de sesiones"
+
+#. module: additional_vendors
+#: model_terms:ir.ui.view,arch_db:additional_vendors.session_search_view
+msgid "State"
+msgstr "Estado"
 
 #. module: additional_vendors
 #: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__state
 msgid "Status"
-msgstr ""
+msgstr "Estado"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: additional_vendors
+#: model:ir.model.fields,field_description:additional_vendors.field_additional_vendors_vendor__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: additional_vendors
+#: model:ir.model.fields,help:additional_vendors.field_additional_vendors_vendor__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
 
 #. module: additional_vendors
 #: model:ir.model,name:additional_vendors.model_additional_vendors_vendor
 msgid "additional vendor"
-msgstr ""
+msgstr "proveedor adicional"

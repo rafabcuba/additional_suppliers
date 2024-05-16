@@ -53,3 +53,5 @@ docs/_build/
 .idea/workspace.xml
 .vscode/launch.json
 
+# Archivos locales de diseño
+diseno/

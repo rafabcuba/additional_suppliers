@@ -7,6 +7,10 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='purchase_delivery_invoice']" position="after">
                 <page string="Additional vendors" name="additional_vendors">
+                    <field name="additional_vendors_recorded" invisible="1"/>
+                    <button id="button_record" name="action_record" string="Record" class="btn-primary"
+                                type="object" attrs="{'invisible': [('additional_vendors_recorded', '=', True)]}"
+                                groups="additional_vendors.group_additional_vendors_admin_gen"/>
                     <field name="additional_vendors_ids" options="{'no_create_edit': True}"/>
                 </page>
             </xpath>

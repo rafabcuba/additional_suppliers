@@ -18,27 +18,29 @@ class PurchaseOrder(models.Model):
             ('internal_type', '=', 'payable'),
         ], limit=1).id
 
+        move_lines = []
+        credit_account_id = payable_account_id
+
         for vendor in self.additional_vendors_ids:
             debit_account_id = vendor.expense_account_id.id
-            credit_account_id = payable_account_id
 
-            new_entry = self.env['account.move'].create({
-                'journal_id': journal.id,
-                'date': fields.Date.today(),
-                'ref': 'additional vendor entry',
-            })
-
-            self.env['account.move.line'].with_context(check_move_validity=False).create({
-                'move_id': new_entry.id,
+            move_lines.append((0, 0, {
                 'account_id': debit_account_id,
                 'debit': self.amount_total,
-            })
+            }))
 
-            self.env['account.move.line'].with_context(check_move_validity=False).create({
-                'move_id': new_entry.id,
+            move_lines.append((0, 0, {
                 'account_id': credit_account_id,
                 'credit': self.amount_total,
-            })
+            }))
 
-            new_entry.action_post()
-            self.additional_vendors_recorded = True
+        new_entry = self.env['account.move'].create({
+            'journal_id': journal.id,
+            'date': fields.Date.today(),
+            'ref': 'additional vendor entry',
+            'line_ids': move_lines,
+        })
+
+        new_entry.action_post()
+        self.additional_vendors_recorded = True
+
